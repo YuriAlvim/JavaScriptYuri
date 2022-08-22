@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Inscrição</title>
+		<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+	
+		var nome;
+		var email;
+		var msg = document.querySelector('caixa_texto');
+
+		hoje = new Date();
+		dia = hoje.getDate();
+		mes = hoje.getMonth() + 1;
+		ano = hoje.getYear() + 1900;
+		document.write("<h3>Hoje: " + dia + "/" + mes + "/" + ano + "</h3>" );
+		
+		function escreva(){
+			
+			document.getElementById("Area").innerHTML = msg.value;
+		}
+	</script>
+	<style>
+		body{
+			text-align: center;
+			font-size: 20px;
+			
+		}
+	</style>
+	</head>
+	<body bgcolor=white>
+		<form>
+			
+			<h2 align=center>Cadastro</h2>
+			
+			<div align=center>
+				<p><input id="caixa_texto" class="caixa_texto" placeholder="Escreva sua mensagem" type=text >
+				   <input type=button value="Enviar" onclick="escreva()">
+				<p><textarea rows=10 cols=40 name=Area id="Area"></textarea>
+			</div>
+		</form>
+	</body>
+</html>

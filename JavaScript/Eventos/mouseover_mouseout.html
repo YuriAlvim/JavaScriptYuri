@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Over and Out</title>
+    <script src="event.js"></script>
+    <style>
+        .amigo {
+            background-color:#53d938;
+            width:90px;
+            height:50px;
+            padding:20px;
+        }
+
+        .amigo:hover{
+            cursor: grab;
+        }
+    </style>
+</head>
+<body>
+    <div class="amigo" onmouseover="mOver(this)" onmouseout="mOut(this)">:)</div>
+</body>
+</html>

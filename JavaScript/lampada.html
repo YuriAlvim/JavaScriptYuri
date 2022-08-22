@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Lâmpada</title>
+    <style>
+        .lampada{
+            background: rgb(248, 248, 0);
+            border: 5px solid #000;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .lampada2{
+            background: rgb(0, 0, 0);
+            border: 5px solid rgb(255, 255, 255);
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        html, body {
+            background: #fff;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="lampada"></div>
+
+    <script>
+        var lampAcesa = document.querySelector('div');
+        var lampApagada = document.querySelector('div');
+        var bodyback = document.querySelector('body');
+        var htmlback = document.querySelector('html');
+
+        lampAcesa.addEventListener('click', apaga);
+        lampApagada.addEventListener('click', acende);
+
+        function apaga(){
+            bodyback.style.background = "#000";
+            htmlback.style.background = "#000";
+
+            element.remove();
+        }
+        function acende(){
+          
+            bodyback.style.background = "#fff";
+            htmlback.style.background = "#fff";
+
+            lampAcesa.classList.remove('lampada2')
+            lampAcesa.classList.add('lampada')
+        }
+    </script>
+</body>
+</html>

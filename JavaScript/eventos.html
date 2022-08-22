@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 - JavaScript Básico</title>
+    <script>
+        function executarAcao(acao){
+            if(acao === 'click'){
+                alert("O botão Enviar foi clicado!!");
+            }
+            else if(acao === 'change'){
+                document.getElementById("caixa").style.backgroundColor = "lightgreen";
+                alert("A caixa de texto foi modificada!");
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <p><input id="caixa" type="text" onchange="executarAcao('change');" value="Modifique o Texto"></p>
+    <p><input type="button" onclick="executarAcao('click')" value="Enviar"></p>
+</body>
+</html>

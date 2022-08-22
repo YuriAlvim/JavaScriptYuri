@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+    <title>Imagens</title>
+    <script>
+
+
+        function mouseover(obj){
+            var img = document.querySelector("img");
+
+            if(img.getAttribute('src') === "img/lisa_escuro.png"){
+                //document.getElementById("imagem").style.width = "300px";
+                if(obj === 'mouseover'){
+                    img.setAttribute('src', 'img/lisa.png');
+                }
+            }
+
+
+            if(img.getAttribute('src') === "img/bart_escuro.png"){
+                //document.getElementById("imagem").style.width = "300px";
+                if(obj === 'mouseover'){
+                    img.setAttribute('src', 'img/bart.png');
+                }
+            }
+        }
+
+        function mouseout(obj){
+            var img = document.querySelector("img");
+
+            if(img.getAttribute('src') === "img/lisa.png"){
+                //document.getElementById("imagem").style.width = "300px";
+                if(obj === 'mouseout'){
+                    img.setAttribute('src', 'img/lisa_escuro.png');
+                }
+                
+            }
+
+
+            if(img.getAttribute('src') === "img/bart.png"){
+                //document.getElementById("imagem").style.width = "300px";
+                if(obj === 'mouseout'){
+                    img.setAttribute('src', 'img/bart.png');
+                }
+            }
+        }
+
+        function click(obj){
+            var img = document.querySelector("img");
+
+            if(img.getAttribute('src') === "img/lisa.png"){
+                //document.getElementById("imagem").style.width = "300px";
+                if(obj === 'click'){
+                img.setAttribute('src', 'img/bart_escuro.png');
+                }
+            }
+
+
+            if(img.getAttribute('src') === "img/bart.png"){
+                //document.getElementById("imagem").style.width = "300px";
+                if(obj === 'click'){
+                img.setAttribute('src', 'img/lisa.png');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href=""></a>
+    <img id="imagem" onclick="click('click')" onmouseover="mouseover('mouseover')" onmouseout="mouseout('mouseout')"  src="img/bart_escuro.png" width="500px" height="580px">
+</body>
+</html>

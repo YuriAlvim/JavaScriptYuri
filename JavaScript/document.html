@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 PWFE - JavaScript</title>
+    <script>
+        function manipularElementos(){
+            document.getElementById("enviar").style.backgroundColor = "lightgreen";
+            document.getElementById("limpar").style.fontStyle = "italic";
+            
+            var nome = document.getElementById("nome");
+            var sexo = document.getElementsByName("sexo");
+            var informacoes = "Nome: " + nome.value;
+
+            if(sexo[0].checked){
+                informacoes += "\nSexo: Masculino";
+            }
+            else if(sexo[1].checked){
+                informacoes += "\nSexo: Feminino";
+            }
+
+            alert(informacoes);
+
+            
+
+            
+        }
+    </script>
+</head>
+<body>
+    <strong>Aula de JavaScript - Objeto 'Document'.</strong>
+    <p><input type="button" value="Testes com o documento" onclick="manipularElementos();"></p>
+    <form name="frmCadastro" id="frmCadastro">
+    <fieldset>
+        <table>
+            <tr>
+                <td>Nome:</td>
+                <td><input type="text" name="nome" id="nome"></td>
+            </tr>
+            <tr>
+                <td>Sexo:</td>
+                <td>
+                    <input type="radio" name="sexo" value="M">Masculino <br>
+                    <input type="radio" name="sexo" value="F">Feminino
+                </td>
+            </tr>
+            <tr>
+                <td>Interesses:</td>
+                <td>
+                    <input type="checkbox" name="interesses" id="javascript"><label for="javascript">JavaScript</label>
+                    <input type="checkbox" name="interesses" id="php"><label for="php">PHP</label>
+                    <input type="checkbox" name="interesses" id="html"><label for="html">HTML</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" id="enviar" name="enviar" value="Enviar">
+                </td>
+                <td>
+                    <input type="reset" id="limpar" name="limpar" value="Limpar">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</body>
+</html>
